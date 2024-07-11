@@ -26,3 +26,7 @@ get_prop(updater_app, default_prop)
 get_prop(updater_app, build_prop)
 
 set_prop(updater_app, recovery_update_prop)
+
+#============= updater_app ==============
+allow updater_app system_data_root_file:dir { open read };
+allow updater_app ota_package_file:dir { read write };
